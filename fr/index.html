@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#111316" media="(prefers-color-scheme: dark)">
+  <meta name="referrer" content="no-referrer">
+  <meta name="description" content="Assistance de Push-up Coach, une app iPhone gratuite pour progresser aux pompes : comptage des répétitions, rappels, tes données et contact.">
+  <title>Assistance – Push-up Coach</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%235b9cff'/%3E%3Cpath d='M9 19l7-7 7 7' fill='none' stroke='%2308111f' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <a class="skip" href="#main">Aller au contenu</a>
+
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="index.html">Push-up Coach</a>
+      <nav class="lang" aria-label="Langue">
+        <a href="../index.html" hreflang="en" lang="en" title="English">EN</a>
+        <a href="index.html" hreflang="fr" lang="fr" aria-current="true">FR</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="wrap">
+    <h1>Push-up Coach</h1>
+    <p class="lead">Une app iPhone gratuite pour progresser aux pompes. Elle suit un programme qui monte niveau après niveau, jusqu’à un test de 150 pompes d’affilée. Elle compte tes répétitions, chronomètre tes temps de repos et garde ta progression sur ton téléphone.</p>
+    <p>Une question, un souci ? Écris à <a href="mailto:hello@wywy.eu?subject=Push-up%20Coach">hello@wywy.eu</a>.</p>
+
+    <h2 id="fonctions">Ce que propose l’app</h2>
+    <ul>
+      <li><strong>Un programme</strong> en 4 niveaux de 13, 19, 25 et 25 séances. Une séance, c’est 5 séries avec 2 minutes de repos. Chaque niveau se termine par un test en une seule série : 20, 50, 100, puis 150 pompes.</li>
+      <li><strong>Un test de niveau</strong> pour commencer au bon endroit. Tu peux aussi changer de jour dans le programme quand tu veux.</li>
+      <li><strong>Le comptage automatique</strong> des répétitions, avec le capteur de proximité ou la caméra avant. Le compte est annoncé à voix haute, et les boutons + et − corrigent un oubli.</li>
+      <li><strong>Des séries libres</strong> et <strong>des séries chronométrées</strong> de 1, 2 ou 3 minutes.</li>
+      <li><strong>Une section Benchmarks</strong> :
+        <ul>
+          <li>Cindy : en 20 minutes, le plus de tours possible de 5 tractions, 10 pompes et 15 squats.</li>
+          <li>Barbara : 5 tours le plus vite possible de 20 tractions, 30 pompes, 40 abdos (sit-ups) et 50 squats, avec 3 minutes de repos entre les tours.</li>
+          <li>Death by Burpees : 1 burpee la première minute, 2 la deuxième, et ainsi de suite, jusqu’à ce que tu n’arrives plus à finir une minute.</li>
+        </ul>
+      </li>
+      <li><strong>L’historique et les stats</strong> : graphiques mensuels, totaux depuis le début et records personnels. Les calories sont une estimation.</li>
+      <li><strong>Des rappels d’entraînement</strong> les jours et à l’heure de ton choix, et <strong>l’ajout au calendrier</strong>.</li>
+      <li><strong>Fonctionne hors connexion.</strong> Pas de compte, rien à configurer.</li>
+    </ul>
+    <p class="meta">Il faut un iPhone sous iOS 17 ou plus récent. Le comptage par la caméra demande un iPhone avec Face ID.</p>
+
+    <h2 id="questions">Questions fréquentes</h2>
+
+    <h3 id="capteur">Comment marche le comptage avec le capteur de proximité ?</h3>
+    <p>Pose ton iPhone à plat au sol, écran vers le haut, sous ta poitrine. Le haut du téléphone, côté écouteur, est tourné vers ta tête : c’est là que se trouve le capteur de proximité. Une répétition compte quand ta poitrine arrive à quelques centimètres du haut du téléphone, puis s’en éloigne.</p>
+    <p>C’est la méthode par défaut. Elle marche sur tous les iPhone, même dans le noir.</p>
+
+    <h3 id="camera">Et avec la caméra avant ?</h3>
+    <p>Dans les <strong>Réglages</strong> de l’app (l’icône en forme de roue dentée), choisis la méthode <strong>Caméra avant</strong>. Il faut un iPhone avec Face ID. Pose le téléphone à plat sous ton visage, écran vers le haut.</p>
+    <p>L’app utilise le suivi du visage d’ARKit (Apple) sur la caméra Face ID pour une seule chose : mesurer la distance entre ton visage et le téléphone. Une répétition compte quand ton visage passe à moins de 25 cm du téléphone (la profondeur de détection de départ), puis remonte. Aucune image n’est enregistrée ni envoyée. La caméra a besoin d’un peu de lumière.</p>
+    <p>Pour régler la détection, ouvre <strong>Réglages › Profondeur de détection</strong>. La distance s’affiche en direct et tu peux faire quelques répétitions d’essai. Si des répétitions ne comptent pas, rends-la plus facile. Si des demi-pompes comptent, rends-la plus profonde.</p>
+
+    <h3 id="ecran-noir">Pourquoi l’écran s’éteint-il avec le capteur ?</h3>
+    <p>Quand quelque chose couvre le capteur de proximité, iOS éteint l’écran, comme quand tu colles le téléphone à ton oreille pendant un appel. C’est justement comme ça que l’app sait que tu es en bas. C’est normal : l’écran se rallume quand tu remontes.</p>
+    <p>Comme tu ne peux pas lire l’écran en pleine pompe, l’app annonce le compte à voix haute. Tu peux couper la voix dans les Réglages.</p>
+
+    <h3 id="corriger">Une répétition n’a pas compté. Comment corriger ?</h3>
+    <p>Touche <strong>+</strong> pendant la série ou le repos pour ajouter une répétition, ou <strong>−</strong> pour en retirer une en trop. C’est le nombre corrigé qui est enregistré.</p>
+    <p>Si le capteur rate souvent des répétitions, vérifie que le haut du téléphone est bien sous ta poitrine et descends jusqu’à t’en approcher. Avec la caméra, ajuste la profondeur de détection.</p>
+
+    <h3 id="programme">Je peux changer de niveau ou de jour ?</h3>
+    <p>Oui. Dans l’onglet <strong>Programme</strong>, touche n’importe quel jour pour en faire ta prochaine séance. Tu peux aussi refaire le test de niveau dans les Réglages.</p>
+
+    <h3 id="rappels">Comment marchent les rappels ?</h3>
+    <p>Va dans <strong>Réglages › Rappel</strong>, active <strong>Me rappeler de m’entraîner</strong>, puis choisis tes jours d’entraînement et l’heure. Ces jours-là, tu reçois une notification à cette heure avec ta prochaine séance. La première fois, iOS te demande l’autorisation.</p>
+    <p>Les rappels sont programmés sur ton iPhone, sans aucun serveur.</p>
+    <p><strong>Ajouter au calendrier</strong> ouvre l’écran Nouvel événement de l’iPhone avec un événement qui se répète. Tu choisis le calendrier et tu valides. L’app ne lit jamais ton calendrier.</p>
+
+    <h3 id="donnees">Mes données sont-elles envoyées quelque part ?</h3>
+    <p>Non. Tout reste sur ton iPhone : pas de compte, pas de serveur, pas de pub, pas de mesure d’audience. Les détails sont dans la <a href="privacy.html">politique de confidentialité</a>.</p>
+
+    <h3 id="supprimer">Comment supprimer mes données ?</h3>
+    <p>Dans les Réglages, touche <strong>Supprimer toutes les données</strong>, puis confirme. Tes séances, tes records et ta progression dans le programme sont effacés de l’iPhone. C’est définitif. Tes réglages, comme les rappels, restent tels quels.</p>
+    <p>Supprimer l’app efface aussi tout ce qu’elle a enregistré. Je n’ai aucune copie de tes données, je n’ai donc rien à supprimer de mon côté.</p>
+
+    <h2 id="contact">Contacter l’assistance</h2>
+    <div class="card">
+      <p>Écris à <a href="mailto:hello@wywy.eu?subject=Push-up%20Coach">hello@wywy.eu</a>.</p>
+      <p>Pour que je puisse t’aider plus vite, indique le modèle de ton iPhone, ta version d’iOS, la version de l’app (Réglages › À propos) et ce qui s’est passé.</p>
+      <p>Push-up Coach est développée par une seule personne : la réponse peut prendre quelques jours.</p>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <nav aria-label="Pages du site">
+        <ul>
+          <li><a href="index.html" aria-current="page">Assistance</a></li>
+          <li><a href="privacy.html">Politique de confidentialité</a></li>
+          <li><a href="terms.html">Conditions d’utilisation</a></li>
+          <li><a href="legal.html">Mentions légales</a></li>
+        </ul>
+      </nav>
+      <p>Push-up Coach, une app iPhone conçue en France.</p>
+    </div>
+  </footer>
+</body>
+</html>

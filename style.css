@@ -1,0 +1,348 @@
+/* Push-up Coach website. One stylesheet for every page.
+   No external fonts, scripts or images. Light and dark follow the system.
+   Contrast (WCAG 2.x), text and links on the page background:
+     light  text 17.8:1, muted 6.6:1, accent #1d5bc4 6.3:1 (5.5:1 on the summary box)
+     dark   text 17.0:1, muted 8.0:1, accent #5b9cff 6.8:1 (5.7:1 on the summary box) */
+
+:root {
+  color-scheme: light dark;
+  --bg: #ffffff;
+  --surface: #f3f5f8;
+  --border: #dfe3e9;
+  --text: #15181d;
+  --muted: #555d6a;
+  --accent: #1d5bc4;
+  --accent-strong: #164a9f;
+  --accent-soft: #e8f0fc;
+  --on-accent: #ffffff;
+  --radius: 12px;
+  --font: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #111316;
+    --surface: #1b1e23;
+    --border: #30353d;
+    --text: #f3f5f7;
+    --muted: #a3abb7;
+    --accent: #5b9cff;
+    --accent-strong: #8bb9ff;
+    --accent-soft: #17233a;
+    --on-accent: #08111f;
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font);
+  font-size: 1.0625rem;
+  line-height: 1.6;
+  overflow-wrap: break-word;
+}
+
+.wrap {
+  max-width: 42rem;
+  margin: 0 auto;
+  /* Inline only, so it doesn't cancel main's top and bottom padding. */
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+/* Skip link: hidden until focused with the keyboard. */
+.skip {
+  position: absolute;
+  left: 1rem;
+  top: -3rem;
+  padding: 0.5rem 0.75rem;
+  border-radius: 8px;
+  background: var(--accent);
+  color: var(--on-accent);
+  font-weight: 600;
+  text-decoration: none;
+  z-index: 1;
+}
+
+.skip:focus {
+  top: 0.75rem;
+}
+
+/* Header: app name and language switch. */
+.site-header {
+  border-bottom: 1px solid var(--border);
+}
+
+.site-header .wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  min-height: 3.5rem;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text);
+  font-weight: 700;
+  font-size: 1.0625rem;
+  text-decoration: none;
+}
+
+.brand::before {
+  content: "";
+  width: 0.875rem;
+  height: 0.875rem;
+  border-radius: 4px;
+  background: var(--accent);
+}
+
+.lang {
+  display: flex;
+  gap: 0.25rem;
+  font-size: 0.9375rem;
+  font-weight: 600;
+}
+
+.lang a {
+  display: inline-block;
+  min-width: 2.75rem;
+  padding: 0.5rem 0.625rem;
+  border-radius: 8px;
+  color: var(--accent);
+  line-height: 1.2;
+  text-align: center;
+  text-decoration: none;
+}
+
+.lang a:hover {
+  background: var(--surface);
+}
+
+.lang a[aria-current] {
+  background: var(--surface);
+  color: var(--text);
+}
+
+/* Main content. */
+main {
+  padding: 2rem 0 3rem;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.25;
+  text-wrap: balance;
+}
+
+h1 {
+  margin: 0 0 0.5rem;
+  font-size: 2rem;
+  letter-spacing: -0.01em;
+}
+
+h2 {
+  margin: 2.5rem 0 0.75rem;
+  font-size: 1.375rem;
+}
+
+h3 {
+  margin: 1.75rem 0 0.375rem;
+  font-size: 1.0625rem;
+}
+
+p,
+ul,
+ol,
+dl {
+  margin: 0 0 1rem;
+}
+
+ul,
+ol {
+  padding-left: 1.25rem;
+}
+
+li + li {
+  margin-top: 0.375rem;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.15em;
+}
+
+a:hover {
+  color: var(--accent-strong);
+  text-decoration-thickness: 2px;
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+strong {
+  font-weight: 650;
+}
+
+.lead {
+  font-size: 1.1875rem;
+  line-height: 1.5;
+}
+
+.meta {
+  color: var(--muted);
+  font-size: 0.9375rem;
+}
+
+/* "In short" box at the top of the policies. */
+.summary {
+  margin: 1.5rem 0 2rem;
+  padding: 1rem 1.25rem;
+  border-radius: var(--radius);
+  background: var(--accent-soft);
+}
+
+.summary h2 {
+  margin-top: 0;
+  font-size: 1.0625rem;
+}
+
+.summary ul {
+  margin-bottom: 0;
+}
+
+/* Contact card on the support page. */
+.card {
+  margin: 1rem 0;
+  padding: 1rem 1.25rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+}
+
+.card p:last-child {
+  margin-bottom: 0;
+}
+
+/* Legal notice: label and value pairs. */
+dl.facts {
+  display: grid;
+  gap: 1.25rem;
+}
+
+dl.facts div {
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid var(--border);
+}
+
+dl.facts div:last-child {
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
+dl.facts dt {
+  margin-bottom: 0.25rem;
+  color: var(--muted);
+  font-size: 0.9375rem;
+  font-weight: 600;
+}
+
+dl.facts dd {
+  margin: 0;
+}
+
+/* Footer: links to every page. */
+.site-footer {
+  border-top: 1px solid var(--border);
+  padding: 1.5rem 0 2.5rem;
+  color: var(--muted);
+  font-size: 0.9375rem;
+}
+
+.site-footer ul {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 0 0.75rem;
+  padding: 0;
+  list-style: none;
+}
+
+.site-footer li + li {
+  margin-top: 0;
+}
+
+/* A drawn dot between links, so screen readers don't announce it. */
+.site-footer li + li::before {
+  content: "";
+  display: inline-block;
+  width: 0.2rem;
+  height: 0.2rem;
+  margin: 0 0.6rem;
+  border-radius: 50%;
+  background: var(--muted);
+  vertical-align: middle;
+}
+
+.site-footer a[aria-current] {
+  color: var(--text);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.site-footer p {
+  margin: 0;
+}
+
+@media (min-width: 40rem) {
+  .wrap {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  main {
+    padding-top: 3rem;
+  }
+
+  h1 {
+    font-size: 2.375rem;
+  }
+}
+
+@media print {
+  .skip,
+  .lang,
+  .site-footer ul {
+    display: none;
+  }
+
+  .summary,
+  .card {
+    border: 1px solid #999999;
+    background: none;
+  }
+
+  a {
+    color: inherit;
+  }
+}
